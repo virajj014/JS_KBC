@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    :root{
+        --col1: #391D6F;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .gamecontainer{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--col1);
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .left{
+        width: 70%;
+        height: 100%;
+        /* background-color: antiquewhite; */
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid white;
+        justify-content: center;
+    }
+
+
+  
+
+    .question-container{
+        width: 100%;
+        /* background-color: aliceblue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .hr{
+        width:50%;
+        height: 3px;
+        background-color: white;
+    }
+
+    .question-container p{
+        color: white;
+        font-size: 35px;
+        width: 100%;
+        text-align: center;
+        border: 4px solid white;
+        padding: 10px 20px;
+    }
+
+    .answer-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .answer-container .answerin {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px;
+    }
+
+    .answer-container .answerin p {
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        border: 4px solid white;
+        padding: 10px 20px;
+    }
+
+    .answer-container .answerin p span{
+        color: gold;
+    }
+
+    .answer-container .answerin p:hover{
+        background-color: white;
+        cursor: pointer;
+        color: var(--col1);
+    }
+
+
+
+    /* RIGHT SECTION STARTS HERE */
+    .right{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress{
+        width:70%;
+        /* background-color: white; */
+        align-self: center;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .progressin{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 20px;
+        /* background-color: aquamarine; */
+        margin: 5px 0px;
+        font-size: 25px;
+        color: white;
+    }
+
+    .progressin1{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 20px;
+        /* background-color: aquamarine; */
+        margin: 5px 0px;
+        font-size: 30px;
+        color: gold;
+    }
+    .progressin:hover,.progressin1:hover, .progress .active{
+        background-color: gold;
+        color: black;
+        cursor: pointer;
+    }
+
+    .hr1{
+        width: 100%;
+        height: 3px;
+        background-color: white;
+    }
+
+    .lifelines{
+        display: flex;
+        width: 100%;
+        height: 40%;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .lifelinein{
+        width: 25%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 20px;
+    }
+
+
+    .lifelinein img{
+        width: 50%;
+        margin: 0px 20px;
+        object-fit: contain;
+    }
+
+    .lifelinein:hover{
+        box-shadow: 0px 0px 10px 5px white;
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+</style>
+<body>
+    <div class="gamecontainer">
+        <div class="left">
+            <!-- question and answer -->
+            <div class="question-container">
+                <div class="hr"></div>
+                <p>What is my name?</p>
+                <div class="hr"></div>
+            </div>
+
+            <div class="answer-container">
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> Harshal
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> Harshal
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> Harshal
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> Harshal
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="lifelines">
+                <div class="lifelinein">
+                    <img src="./8.png" alt="">
+                </div>
+                <div class="lifelinein">
+                    <img src="./7.png" alt="">
+                </div>
+                <div class="lifelinein">
+                    <img src="./9.png" alt="">
+                </div>
+            </div>
+            <div class="hr1"></div>
+            <div class="progress">
+                <div class="progressin1">Rs. 1 Million</div>
+                <div class="progressin">Rs. 500,000</div>
+                <div class="progressin">Rs. 250,000</div>
+                <div class="progressin1">Rs. 100,000</div>
+                <div class="progressin">Rs. 50,000</div>
+                <div class="progressin">Rs. 25,000</div>
+                <div class="progressin1">Rs. 16,000</div>
+                <div class="progressin">Rs. 8,000</div>
+                <div class="progressin">Rs. 4,000</div>
+                <div class="progressin">Rs. 2,000</div>
+                <div class="progressin1">Rs. 1,000</div>
+                <div class="progressin active">Rs. 0</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
