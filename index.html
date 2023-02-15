@@ -9,16 +9,16 @@
 </head>
 
 <style>
-    :root{
+    :root {
         --col1: #391D6F;
     }
 
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
 
-    .gamecontainer{
+    .gamecontainer {
         width: 100%;
         height: 100vh;
         background-color: var(--col1);
@@ -27,7 +27,7 @@
     }
 
 
-    .left{
+    .left {
         width: 70%;
         height: 100%;
         /* background-color: antiquewhite; */
@@ -38,9 +38,9 @@
     }
 
 
-  
 
-    .question-container{
+
+    .question-container {
         width: 100%;
         /* background-color: aliceblue; */
         display: flex;
@@ -49,13 +49,13 @@
         margin-bottom: 20px;
     }
 
-    .hr{
-        width:50%;
+    .hr {
+        width: 50%;
         height: 3px;
         background-color: white;
     }
 
-    .question-container p{
+    .question-container p {
         color: white;
         font-size: 35px;
         width: 100%;
@@ -64,7 +64,7 @@
         padding: 10px 20px;
     }
 
-    .answer-container{
+    .answer-container {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -86,11 +86,11 @@
         padding: 10px 20px;
     }
 
-    .answer-container .answerin p span{
+    .answer-container .answerin p span {
         color: gold;
     }
 
-    .answer-container .answerin p:hover{
+    .answer-container .answerin p:hover {
         background-color: white;
         cursor: pointer;
         color: var(--col1);
@@ -99,15 +99,15 @@
 
 
     /* RIGHT SECTION STARTS HERE */
-    .right{
+    .right {
         width: 30%;
         height: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .progress{
-        width:70%;
+    .progress {
+        width: 70%;
         /* background-color: white; */
         align-self: center;
         height: 50%;
@@ -115,7 +115,8 @@
         flex-direction: column;
         justify-content: center;
     }
-    .progressin{
+
+    .progressin {
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -127,7 +128,7 @@
         color: white;
     }
 
-    .progressin1{
+    .progressin1 {
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -138,19 +139,22 @@
         font-size: 30px;
         color: gold;
     }
-    .progressin:hover,.progressin1:hover, .progress .active{
+
+    .progressin:hover,
+    .progressin1:hover,
+    .progress .active {
         background-color: gold;
         color: black;
         cursor: pointer;
     }
 
-    .hr1{
+    .hr1 {
         width: 100%;
         height: 3px;
         background-color: white;
     }
 
-    .lifelines{
+    .lifelines {
         display: flex;
         width: 100%;
         height: 40%;
@@ -159,7 +163,7 @@
         flex-wrap: wrap;
     }
 
-    .lifelinein{
+    .lifelinein {
         width: 25%;
         height: 100px;
         display: flex;
@@ -170,26 +174,27 @@
     }
 
 
-    .lifelinein img{
+    .lifelinein img {
         width: 50%;
         margin: 0px 20px;
         object-fit: contain;
     }
 
-    .lifelinein:hover{
+    .lifelinein:hover {
         box-shadow: 0px 0px 10px 5px white;
         transform: scale(1.1);
         cursor: pointer;
         transition: all 0.5s ease-in-out;
     }
 </style>
+
 <body>
     <div class="gamecontainer">
         <div class="left">
             <!-- question and answer -->
             <div class="question-container">
                 <div class="hr"></div>
-                <p>What is my name?</p>
+                <p>------------</p>
                 <div class="hr"></div>
             </div>
 
@@ -197,11 +202,11 @@
                 <div class="answerin">
                     <div class="hr"></div>
                     <p>
-                        <span>A.</span> Harshal
+                        <span>A.</span> ---------
                     </p>
                     <div class="hr"></div>
                     <p>
-                        <span>B.</span> Harshal
+                        <span>B.</span> ---------
                     </p>
                     <div class="hr"></div>
                 </div>
@@ -209,11 +214,11 @@
                 <div class="answerin">
                     <div class="hr"></div>
                     <p>
-                        <span>C.</span> Harshal
+                        <span>C.</span> ----------
                     </p>
                     <div class="hr"></div>
                     <p>
-                        <span>D.</span> Harshal
+                        <span>D.</span> ----------
                     </p>
                     <div class="hr"></div>
                 </div>
@@ -233,7 +238,7 @@
             </div>
             <div class="hr1"></div>
             <div class="progress">
-                <div class="progressin1">Rs. 1 Million</div>
+                <!-- <div class="progressin1">Rs. 1 Million</div>
                 <div class="progressin">Rs. 500,000</div>
                 <div class="progressin">Rs. 250,000</div>
                 <div class="progressin1">Rs. 100,000</div>
@@ -244,10 +249,845 @@
                 <div class="progressin">Rs. 4,000</div>
                 <div class="progressin">Rs. 2,000</div>
                 <div class="progressin1">Rs. 1,000</div>
-                <div class="progressin active">Rs. 0</div>
+                <div class="progressin active">Rs. 0</div> -->
             </div>
         </div>
     </div>
 </body>
+
+
+<script>
+    const q1set = [
+        {
+            question: "What is the name of the ancient Incan city in Peru that is considered one of the new Seven Wonders of the World?",
+            a: "Angkor Wat",
+            b: "Petra",
+            c: "Machu Picchu",
+            d: "The Colosseum",
+            correct: "Machu Picchu"
+        },
+        {
+            question: "What is the name of the famous tower in Italy that leans to one side?",
+            a: "Eiffel Tower",
+            b: "CN Tower",
+            c: "Leaning Tower of Pisa",
+            d: "Tokyo Tower",
+            correct: "Leaning Tower of Pisa"
+        },
+        {
+            question: "What is the name of the famous monument in the USA that was built to commemorate the first US President?",
+            a: "Mount Rushmore",
+            b: "Lincoln Memorial",
+            c: "Statue of Liberty",
+            d: "Washington Monument",
+            correct: "Washington Monument"
+        }
+    ]
+
+    const q2set = [
+        {
+            question: "What is the largest continent in the world?",
+            a: "Africa",
+            b: "Asia",
+            c: "North America",
+            d: "South America",
+            correct: "Asia"
+        },
+        {
+            question: "What is the smallest continent in the world?",
+            a: "Antarctica",
+            b: "Europe",
+            c: "Australia",
+            d: "South America",
+            correct: "Australia"
+        },
+        {
+            question: "What is the only continent that is also a country?",
+            a: "Europe",
+            b: "Africa",
+            c: "Australia",
+            d: "North America",
+            correct: "Australia"
+        }
+    ];
+
+
+    const q3set = [
+        {
+            question: "What is the largest ocean in the world?",
+            a: "Atlantic Ocean",
+            b: "Arctic Ocean",
+            c: "Indian Ocean",
+            d: "Pacific Ocean",
+            correct: "Pacific Ocean"
+        },
+        {
+            question: "What is the smallest ocean in the world?",
+            a: "Arctic Ocean",
+            b: "Southern Ocean",
+            c: "Indian Ocean",
+            d: "Atlantic Ocean",
+            correct: "Southern Ocean"
+        },
+        {
+            question: "What is the deepest ocean in the world?",
+            a: "Atlantic Ocean",
+            b: "Arctic Ocean",
+            c: "Indian Ocean",
+            d: "Pacific Ocean",
+            correct: "Pacific Ocean"
+        }
+    ];
+
+    const q4set = [
+        {
+            question: "What is the largest desert in the world?",
+            a: "Gobi Desert",
+            b: "Sahara Desert",
+            c: "Mojave Desert",
+            d: "Kalahari Desert",
+            correct: "Sahara Desert"
+        },
+        {
+            question: "What is the only desert in the world that is home to a large number of wild camels?",
+            a: "Mojave Desert",
+            b: "Sahara Desert",
+            c: "Gobi Desert",
+            d: "Arabian Desert",
+            correct: "Gobi Desert"
+        },
+        {
+            question: "What is the largest hot desert in the world?",
+            a: "Sahara Desert",
+            b: "Mojave Desert",
+
+        }
+    ]
+
+    const q5set = [
+        {
+            question: "What is the capital of Japan?",
+            a: "Tokyo",
+            b: "Osaka",
+            c: "Kyoto",
+            d: "Hiroshima",
+            correct: "Tokyo",
+
+        },
+        {
+            question: "What is the largest country in South America?",
+            a: "Argentina",
+            b: "Peru",
+            c: "Brazil",
+            d: "Colombia",
+            correct: "Brazil",
+
+        },
+        {
+            question: "What is the deepest point in the ocean?",
+            a: "Mariana Trench",
+            b: "Puerto Rico Trench",
+            c: "Java Trench",
+            d: "Aleutian Trench",
+            correct: "Mariana Trench",
+
+        },
+    ];
+
+    const q6set = [
+        {
+            question: "What is the largest desert in the world?",
+            a: "Sahara Desert",
+            b: "Arabian Desert",
+            c: "Gobi Desert",
+            d: "Antarctica",
+            correct: "Antarctica",
+
+        },
+        {
+            question: "What is the capital of Canada?",
+            a: "Toronto",
+            b: "Montreal",
+            c: "Ottawa",
+            d: "Vancouver",
+            correct: "Ottawa",
+
+        },
+        {
+            question: "What is the smallest continent in the world?",
+            a: "Africa",
+            b: "Europe",
+            c: "Asia",
+            d: "Australia",
+            correct: "Australia",
+
+        },
+    ];
+
+    const q7set = [
+        {
+            question: "What is the highest waterfall in the world?",
+            a: "Angel Falls",
+            b: "Niagara Falls",
+            c: "Iguazu Falls",
+            d: "Victoria Falls",
+            correct: "Angel Falls",
+
+        },
+        {
+            question: "What is the capital of Italy?",
+            a: "Rome",
+            b: "Venice",
+            c: "Milan",
+            d: "Florence",
+            correct: "Rome",
+
+        },
+        {
+            question: "What is the largest lake in Africa?",
+            a: "Lake Tanganyika",
+            b: "Lake Malawi",
+            c: "Lake Victoria",
+            d: "Lake Turkana",
+            correct: "Lake Victoria",
+
+        },
+    ];
+
+    const q8set = [
+        {
+            question: "What is the tallest animal in the world?",
+            a: "Hippopotamus",
+            b: "Giraffe",
+            c: "Elephant",
+            d: "Rhino",
+            correct: "Giraffe",
+        },
+        {
+            question: "What is the capital of Brazil?",
+            a: "Rio de Janeiro",
+            b: "Brasília",
+            c: "São Paulo",
+            d: "Belo Horizonte",
+            correct: "Brasília",
+        },
+        {
+            question: "What is the largest country in the world?",
+            a: "Russia",
+            b: "Canada",
+            c: "China",
+            d: "United States",
+            correct: "Russia",
+        },
+    ];
+
+    const q9set = [
+        {
+            question: "What is the name of the ancient Incan city in Peru that is considered one of the new Seven Wonders of the World?",
+            a: "Angkor Wat",
+            b: "Petra",
+            c: "Machu Picchu",
+            d: "The Colosseum",
+            correct: "Machu Picchu"
+        },
+        {
+            question: "What is the name of the famous tower in Italy that leans to one side?",
+            a: "Eiffel Tower",
+            b: "CN Tower",
+            c: "Leaning Tower of Pisa",
+            d: "Tokyo Tower",
+            correct: "Leaning Tower of Pisa"
+        },
+        {
+            question: "What is the name of the famous monument in the USA that was built to commemorate the first US President?",
+            a: "Mount Rushmore",
+            b: "Lincoln Memorial",
+            c: "Statue of Liberty",
+            d: "Washington Monument",
+            correct: "Washington Monument"
+        }
+    ];
+
+    const q10set = [
+        {
+            question: "What is the largest continent in the world?",
+            a: "Africa",
+            b: "Asia",
+            c: "North America",
+            d: "South America",
+            correct: "Asia"
+        },
+        {
+            question: "What is the smallest continent in the world?",
+            a: "Antarctica",
+            b: "Europe",
+            c: "Australia",
+            d: "South America",
+            correct: "Australia"
+        },
+        {
+            question: "What is the only continent that is also a country?",
+            a: "Europe",
+            b: "Africa",
+            c: "Australia",
+            d: "North America",
+            correct: "Australia"
+        }
+    ];
+
+    const q11set = [
+        {
+            question: "What is the largest ocean in the world?",
+            a: "Atlantic Ocean",
+            b: "Arctic Ocean",
+            c: "Indian Ocean",
+            d: "Pacific Ocean",
+            correct: "Pacific Ocean"
+        },
+        {
+            question: "What is the smallest ocean in the world?",
+            a: "Arctic Ocean",
+            b: "Southern Ocean",
+            c: "Indian Ocean",
+            d: "Atlantic Ocean",
+            correct: "Southern Ocean"
+        },
+        {
+            question: "What is the deepest ocean in the world?",
+            a: "Atlantic Ocean",
+            b: "Arctic Ocean",
+            c: "Indian Ocean",
+            d: "Pacific Ocean",
+            correct: "Pacific Ocean"
+        }
+    ];
+
+    const q12set = [
+        {
+            question: "What is the largest desert in the world?",
+            a: "Gobi Desert",
+            b: "Sahara Desert",
+            c: "Mojave Desert",
+            d: "Kalahari Desert",
+            correct: "Sahara Desert"
+        },
+        {
+            question: "What is the only desert in the world that is home to a large number of wild camels?",
+            a: "Mojave Desert",
+            b: "Sahara Desert",
+            c: "Gobi Desert",
+            d: "Arabian Desert",
+            correct: "Gobi Desert"
+        },
+        {
+            question: "What is the largest hot desert in the world?",
+            a: "Sahara Desert",
+            b: "Mojave Desert",
+
+        }
+    ]
+
+    const progressset = [
+        {
+            id: 1,
+            price: 0,
+        },
+        {
+            id: 2,
+            price: 1000,
+        },
+        {
+            id: 3,
+            price: 2000,
+        },
+        {
+            id: 4,
+            price: 4000,
+        },
+        {
+            id: 5,
+            price: 8000,
+        },
+        {
+            id: 6,
+            price: 16000,
+        },
+        {
+            id: 7,
+            price: 32000,
+        },
+        {
+            id: 8,
+            price: 64000,
+        },
+        {
+            id: 9,
+            price: 125000,
+        },
+        {
+            id: 10,
+            price: 250000,
+        },
+        {
+            id: 11,
+            price: 500000,
+        },
+        {
+            id: 12,
+            price: 1000000,
+        },
+    ]
+
+    const showprogressset = (progressset) => {
+        let progressdiv = document.querySelector(".progress")
+        let progresssetdivdata = '';
+        // console.log(progressdiv)
+
+        progressset = progressset.sort((a, b) => b.price - a.price);
+        progressset.forEach((item, index) => {
+            if (item.price == 1000 || item.price == 16000
+                || item.price == 125000 || item.price == 1000000
+            ) {
+                item.price = item.price.toLocaleString();
+                // console.log(item.price)
+                progresssetdivdata += `  
+        <div class="progressin1">Rs. ${item.price}</div>`
+            }
+            else {
+                item.price = item.price.toLocaleString();
+                // console.log(item.price)
+                progresssetdivdata += `  
+        <div class="progressin">Rs. ${item.price}</div>`
+            }
+        })
+
+        progressdiv.innerHTML = progresssetdivdata;
+    }
+    showprogressset(progressset)
+
+    let currentQuestion = 10;
+    let score = 0;
+
+
+    const question = document.querySelector(".question-container p")
+    const allanswerscont = document.querySelector(".answer-container")
+
+
+    const setquestionandanswer = (currentQuestion) => {
+        if (currentQuestion == 1) {
+            let random = Math.floor(Math.random() * q1set.length)
+            let randomquestion = q1set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion == 2) {
+            let random = Math.floor(Math.random() * q2set.length)
+            let randomquestion = q2set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+     
+        else if (currentQuestion == 3) {
+            let random = Math.floor(Math.random() * q3set.length)
+            let randomquestion = q3set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion ==4) {
+            let random = Math.floor(Math.random() * q4set.length)
+            let randomquestion = q4set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+        else if (currentQuestion == 5) {
+            let random = Math.floor(Math.random() * q5set.length)
+            let randomquestion = q5set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion == 6) {
+            let random = Math.floor(Math.random() * q6set.length)
+            let randomquestion = q6set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+
+        else if (currentQuestion == 7) {
+            let random = Math.floor(Math.random() * q7set.length)
+            let randomquestion = q7set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion ==8) {
+            let random = Math.floor(Math.random() * q8set.length)
+            let randomquestion = q8set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+
+        else if (currentQuestion == 9) {
+            let random = Math.floor(Math.random() * q9set.length)
+            let randomquestion = q9set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion ==10) {
+            let random = Math.floor(Math.random() * q10set.length)
+            let randomquestion = q10set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+
+        else if (currentQuestion == 11) {
+            let random = Math.floor(Math.random() * q11set.length)
+            let randomquestion = q11set[random]
+            question.innerHTML = randomquestion.question;
+
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            
+            `
+        }
+
+        else if (currentQuestion ==12) {
+            let random = Math.floor(Math.random() * q12set.length)
+            let randomquestion = q12set[random]
+            question.innerHTML = randomquestion.question;
+
+            allanswerscont.innerHTML = `
+            <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>A.</span> ${randomquestion.a}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>B.</span> ${randomquestion.b}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="answerin">
+                    <div class="hr"></div>
+                    <p>
+                        <span>C.</span> ${randomquestion.c}
+                    </p>
+                    <div class="hr"></div>
+                    <p>
+                        <span>D.</span> ${randomquestion.d}
+                    </p>
+                    <div class="hr"></div>
+                </div>
+            `
+        }
+   
+    }
+    setquestionandanswer(currentQuestion)
+
+
+
+    const setactivetoprogressitem = (currentQuestion) => {
+        let progresssetdiv = document.querySelector(".progress")
+        let progresssetdivdata = progresssetdiv.querySelectorAll("div")
+        let progresssetdivdatalength = progresssetdivdata.length
+
+        progresssetdivdata[progresssetdivdatalength- currentQuestion].
+        classList.add("active")
+    }
+    setactivetoprogressitem(currentQuestion)
+</script>
 
 </html>
